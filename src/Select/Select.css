@@ -1,0 +1,62 @@
+.select-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 1rem;
+  border: 1px solid green;
+  border-radius: 12px;
+  background-color: aqua;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.select-list {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  list-style-type: none;
+  display: none;
+}
+
+.select-wrapper--open .select-list {
+  display: block;
+  animation-name: rotateMenu;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.select-button {
+  width: 80%;
+  padding: 1rem;
+  border: none;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  border-radius: 20px;
+  background-color: aqua;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.select-button:hover {
+  color: red;
+  background-color: chartreuse;
+}
+
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg)
+  }
+  70% {
+    transform: rotateX(20deg)
+  }
+  100% {
+    transform: rotateX(0deg)
+  }
+}
